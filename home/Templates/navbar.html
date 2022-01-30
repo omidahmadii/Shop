@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/shop">شبکه امید</a>
+  <a class="navbar-brand" href="{% url 'ShopHome' %}">شبکه امید</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,33 +8,32 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/shop">خانه<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'ShopHome' %}">خانه<span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/shop/tracker">Tracker</a>
+        <a class="nav-link" href="{% url 'TrackingStatus' %}">Tracker</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/blog">وبلاگ</a>
+        <a class="nav-link" href="{% url 'BlogHome' %}">وبلاگ</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/shop/about">درباره ی ما</a>
+        <a class="nav-link" href="{% url 'AboutUs' %}">درباره ی ما</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="/shop/contact">ارتباط با ما</a>
+        <a class="nav-link" href="{% url 'ContactUs' %}">ارتباط با ما</a>
       </li>
 
     </ul>
-    <form method='get' action='/shop/search/' class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <form method='get' action='search/' class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="جستجو" aria-label="search" name="search" id="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">جستجو</button>
     </form>
     <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
 
-
-  Cart(<span id="cart">0</span>)
+      Cart(<span id="cart">0</span>)
 </button>
   </div>
 </nav>

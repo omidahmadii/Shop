@@ -11,25 +11,26 @@ def about(request):
     return render(request, 'about.html')
 
 
-def contact():
-    return None
+def contact(request):
+    return render(request, 'contact.html')
 
 
-def tracker():
-    return None
+def tracker(request):
+    return render(request, 'tracker.html')
 
 
-def search():
-    return None
+def search(request):
+    return render(request, 'search.html')
 
 
-def productView():
-    return None
+def productView(request):
+    return render(request, 'productView.html')
 
 
-def checkout():
-    return None
+def checkout(request):
+    return render(request, 'checkout.html')
 
 
-def handlerequest():
-    return None
+def handlerequest(request):
+    return render(request, 'handlerequest.html')
+

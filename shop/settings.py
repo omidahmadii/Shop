@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,8 @@ ROOT_URLCONF = 'shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'home/Templates'],
+        'DIRS': [BASE_DIR / 'home/Templates',
+                 BASE_DIR / 'blog/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
