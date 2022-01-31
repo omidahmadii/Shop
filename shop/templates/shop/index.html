@@ -64,9 +64,9 @@ padding-right: 0;
                                 <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
                                 <h6 class="card-title" >Price: <span id="pricepr{{i.id}}">{{i.price}}</span></h6>
                                 <span id="divpr{{i.id}}" class="divpr">
-                                    <button id="pr{{i.id}}" class="btn btn-primary cart">Add To Cart</button>
+                                    <button id="pr{{i.id}}" class="btn btn-primary cart">اضافه کردن به سبد</button>
                                 </span>
-                                <a href="/shop/products/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-primary cart">QuickView</button></a>
+                                <a href="/shop/products/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-primary cart">نمایش</button></a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ updatePopover(cart);
 function updatePopover(cart) {
     console.log('We are inside updatePopover');
     var popStr = "";
-    popStr = popStr + "<h5> Cart for your items in my shopping cart </h5><div class='mx-2 my-2'>";
+    popStr = popStr + "<h5>کالاهای موجود در سبد خرید</h5><div class='mx-2 my-2'>";
     var i = 1;
     for (var item in cart) {
         popStr = popStr + "<b>" + i + "</b>. ";
@@ -132,7 +132,7 @@ function updatePopover(cart) {
 
     }
 
-    popStr = popStr + "</div> <a href='/shop/checkout'><button class='btn btn-primary' id ='checkout'>Checkout</button></a> <button class='btn btn-primary' onclick='clearCart()' id ='clearCart'>Clear Cart</button>     "
+    popStr = popStr + "</div> <a href='/shop/checkout'><button class='btn btn-primary' id ='checkout'>بررسی</button></a> <button class='btn btn-primary' onclick='clearCart()' id ='clearCart'>خالی کردن سبد</button>     "
     console.log(popStr);
     document.getElementById('popcart').setAttribute('data-content', popStr);
     $('#popcart').popover('show');
@@ -142,7 +142,7 @@ function updatePopover(cart) {
 function clearCart() {
     cart = JSON.parse(localStorage.getItem('cart'));
     for (var item in cart) {
-        document.getElementById('div' + item).innerHTML = '<button id="' + item + '" class="btn btn-primary cart">Add To Cart</button>'
+        document.getElementById('div' + item).innerHTML = '<button id="' + item + '" class="btn btn-primary cart">اضافه کردن به سبد</button>'
     }
     localStorage.clear();
     cart = {};

@@ -3,28 +3,28 @@
 {% block body %}
 <div class="container">
     <div class="col my-4">
-        <h2>Enter your Order Id and Email address to track your order</h2>
+        <h2>لطفا برای پیگیری سفارش شماره ی سفارش و آدرس ایمیل خود را وارد نمایید.</h2>
         <form method="post" action="#" id="trackerForm">{% csrf_token %}
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputname">Order Id</label>
-                    <input type="text" class="form-control" id="orderId" name="orderId" placeholder="Order Id">
+                    <label for="inputname">شماره سفارش</label>
+                    <input type="text" class="form-control" id="orderId" name="orderId" placeholder="شماره سفارش">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    <label for="inputEmail4">ایمیل</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="ایمیل">
                 </div>
-                <button type="submit" class="btn btn-primary">Track Order</button>
+                <button type="submit" class="btn btn-primary">پیگیری سفارش</button>
             </div>
     </div>
     <div class="col my-4">
-        <h2>Your Order Status</h2>
+        <h2>وضعیت سفارش شما</h2>
         <div class="my-4">
             <ul class="list-group" id="items">
-                Enter your order Id and Email and click Track Order to find details about your order!
+                لطفا برای یافتن جزئیات سفارش شماره ی سفارش و آدرس ایمیل خود را وارد نمایید
             </ul>
         </div>
-        <h2>Your Order Details</h2>
+        <h2>جزئیات سفارش</h2>
         <div class="my-4">
             <ul class="list-group" id="citems">
             </ul>
@@ -85,7 +85,8 @@ $('#trackerForm').submit(function(event) {
 
             } else {
                 mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">
-                    Sorry, We are not able to fetch this order id and email. Make sure to type correct order Id and email</li>`
+                    با عرض پوزش، در حال حاضر موفق به پیدا کردن شماره ی سفارش و یا آدرس ایمیل نشدیم . لطفا مجددا شماره سفارش و ایمیل را بررسی نمایید
+                    </li>`
                 $('#items').append(mystr);
                 $('#citems').append(mystr);
 
