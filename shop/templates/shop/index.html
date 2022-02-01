@@ -44,7 +44,7 @@ padding-right: 0;
 <div class="container">
     <!--Slideshow starts here -->
     {% for product, range, nSlides in allProds %}
-    <h5 class="my-4">Flash Sale On {{product.0.category}} - Recommended Items</h5>
+    <h5 class="my-4">کالاهای پرمخاطب دسته بندی  {{product.0.category}} - پیشنهادات</h5>
     <div class="row">
         <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
             <ul class="carousel-indicators">
@@ -62,7 +62,7 @@ padding-right: 0;
                             <div class="card-body">
                                 <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name}}</h5>
                                 <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
-                                <h6 class="card-title" >Price: <span id="pricepr{{i.id}}">{{i.price}}</span></h6>
+                                <h6 class="card-title" >قیمت : <span id="pricepr{{i.id}}">{{i.price}}</span></h6>
                                 <span id="divpr{{i.id}}" class="divpr">
                                     <button id="pr{{i.id}}" class="btn btn-primary cart">اضافه کردن به سبد</button>
                                 </span>

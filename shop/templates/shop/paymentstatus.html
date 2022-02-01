@@ -1,11 +1,11 @@
 {% extends 'shop/basic.html' %}
-{% block title%} My Awesome Cart Tracker{% endblock %}
+{% block title%} پیگیری سفارش {% endblock %}
 {% block body %}
 <div class="container">
     {{response}}
     <div class="col my-4">
 
-        <h2>Payment status regarding your order Id {{response.ORDERID}}</h2>
+        <h2>وضعیت پرداخت شناسه سفارش شما {{response.ORDERID}}</h2>
         {% if response.RESPCODE == '01' %}
         ORDER SUCCESS
         {% else %}
